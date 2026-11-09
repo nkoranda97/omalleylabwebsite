@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!--
+    A letter, not the lab's mark, and that is a deliberate trade.
+
+    A browser draws this at 16px, which is 256 pixels in total. The mark is outline art: a thin
+    circle, a leaf drawn in thin lines and five thin band marks. Outline art cannot survive 16px,
+    so the favicon identifies rather than reproduces. The full mark still appears in the nav and
+    the footer, at 40px and 32px, where it has the room it needs.
+
+    The O is a path rather than type on purpose: text in an SVG favicon does not reliably render
+    in browser chrome, which has no page context and may not have the font. Two ellipses with an
+    even-odd fill. The counter is narrower than the outline, so the sides run 56 thick against 26
+    at the top and bottom: the vertical stress of the serif the site's headings are set in.
+    Lime on plum, the site's accent on its ink, measures 9.1 to 1.
+  -->
+  <circle cx="256" cy="256" r="256" fill="#2b1d30"/>
+  <path fill="#b9cf3e" fill-rule="evenodd" d="M 138,256 A 118,138 0 1,0 374,256 A 118,138 0 1,0 138,256 Z M 194,256 A 62,112 0 1,0 318,256 A 62,112 0 1,0 194,256 Z"/>
+</svg>
