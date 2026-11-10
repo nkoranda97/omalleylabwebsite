@@ -115,7 +115,7 @@ function Photo({ member, eager }: { member: Member; eager: boolean }) {
         alt={photoAlt(member)}
         fill
         sizes={SIZES}
-        className={`object-cover ${CROP_FROM}`}
+        className={`object-cover ${member.position ?? CROP_FROM}`}
         loading={eager ? "eager" : "lazy"}
       />
     </div>

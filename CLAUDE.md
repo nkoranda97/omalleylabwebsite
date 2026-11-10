@@ -151,7 +151,7 @@ Conventional Next.js App Router layout. What exists today:
   /schema.sql           # committed DDL snapshot, zero rows
   /fixture.ts           # builds a fabricated database and MEME tree for tests
 /public                 # web-served static assets, COMMITTED — see the note below
-  /people/              # five headshots, whole frames, downscaled only
+  /people/              # six headshots, whole frames, downscaled only
   /home/                # four photographs for the landing page's hero grid
   /research/            # one photograph for the research page
 /data                   # gitignored wholesale — never committed

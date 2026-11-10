@@ -32,6 +32,13 @@ export type Member = {
    */
   photo: string | null;
   /**
+   * Where the 4:5 frame's `object-cover` takes its crop from, as a literal Tailwind class so the
+   * scanner sees it. Only for a photo whose subject is far off-centre, where the page's generic
+   * crop would show the background instead of the person. The file itself stays a whole frame.
+   * Omitted means the generic crop.
+   */
+  position?: string;
+  /**
    * Labelled facts shown beside a featured member's photograph.
    *
    * Only the PI has these today. They fill the space a group of one leaves next to a single
@@ -117,6 +124,13 @@ export const PEOPLE: readonly MemberGroup[] = [
     heading: "Postdocs & Staff",
     members: [
       { name: "Jhong-He Yu, Ph.D.", role: "Postdoctoral Scholar", photo: "jhong-he-yu.jpg" },
+      {
+        name: "Eva Mei Shouse, Ph.D.",
+        role: "Postdoctoral Scholar",
+        photo: "eva-mei-shouse.jpg",
+        /* A wide landscape frame with her at the right edge; centred, it shows only the rice. */
+        position: "object-right",
+      },
       { name: "Nick Koranda", role: "Lab Manager", photo: "nicholas-koranda.jpg" },
     ],
   },
