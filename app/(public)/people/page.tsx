@@ -65,8 +65,15 @@ const BOX =
  * `md` up they sit three across in the space left over beside a 168px label column. Wrong values
  * here do not break the layout, they just make the browser pick a poorly-sized variant, so they
  * are worth keeping honest when the grid changes.
+ *
+ * **Doubled, because `sizes` is the frame's width and `cover` draws past it.** The browser picks a
+ * variant to fill the `<img>` box, but a photo wider than 4:5 is scaled to the frame's *height* and
+ * overflows sideways, so the pixels actually on screen are wider than the box by (photo aspect ÷
+ * 0.8). A 3:2 landscape needs 1.875× the frame width; told only the frame width, the browser fetched
+ * a 640px variant for a frame needing ~1125 device pixels and the photo rendered visibly blurred.
+ * 2× covers any source up to 8:5. Portrait sources overfetch a little, which is the cheaper error.
  */
-const SIZES = "(min-width: 1280px) 300px, (min-width: 768px) 240px, 45vw";
+const SIZES = "(min-width: 1280px) 600px, (min-width: 768px) 480px, 90vw";
 
 /**
  * Where the generic crop takes its square from: horizontally centred, biased upward.
